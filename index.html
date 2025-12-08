@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025 크리스마스</title>
+    <title>찬양 연습 페이지</title>
     <style>
         body {
-            font-family: 'Pretendard', sans-serif; /* 깔끔한 폰트 */
+            font-family: 'Pretendard', sans-serif;
             text-align: center;
             background-color: #222;
             color: white;
@@ -16,45 +16,59 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
+            padding-bottom: 50px; /* 맨 아래 여백 */
         }
-        /* 각 비디오를 감싸는 상자 */
-        .video-card {
+        /* 공통 카드 스타일 (영상, 악보 박스) */
+        .card {
             background: #333;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 30px; /* 영상 사이 간격 */
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px; /* 박스 사이 간격 */
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
         h2 {
             margin-top: 0;
-            color: #ffcc00; /* 제목 색상 (노란색 포인트) */
-            font-size: 1.2rem;
+            color: #ffcc00; /* 노란색 포인트 */
+            font-size: 1.3rem;
+            margin-bottom: 15px;
         }
         video {
             width: 100%;
             border-radius: 8px;
             background: black;
         }
+        /* --- 악보 이미지 스타일 --- */
+        .score-img {
+            width: 100%;       /* 가로 꽉 차게 */
+            height: auto;      /* 세로 비율 유지 */
+            border-radius: 8px;
+            background: white; /* 악보 배경 흰색 */
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>🎬 찬양 영상을 보고 연습합시다</h1>
-        <p>총 2개의 영상을 업로드했습니다.</p>
+        <h1>🎬 찬양 연습</h1>
+        <p>영상 2개와 악보입니다.</p>
 
-        <div class="video-card">
+        <div class="card">
             <h2>1. 오리지널 음원</h2>
             <video controls playsinline>
                 <source src="video1.mp4" type="video/mp4">
             </video>
         </div>
 
-        <div class="video-card">
-            <h2>2. MR </h2>
+        <div class="card">
+            <h2>2. MR (반주)</h2>
             <video controls playsinline>
                 <source src="video2.mp4" type="video/mp4">
             </video>
+        </div>
+
+        <div class="card">
+            <h2>🎼 악보</h2>
+            <img src="score.jpg" alt="악보 이미지" class="score-img">
         </div>
 
     </div>
