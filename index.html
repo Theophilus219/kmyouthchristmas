@@ -3,77 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>내 비디오 웹사이트</title>
+    <title>2025 크리스마스</title>
     <style>
-        /* 간단한 스타일링 (디자인) */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Pretendard', sans-serif; /* 깔끔한 폰트 */
+            text-align: center;
+            background-color: #222;
+            color: white;
             margin: 0;
             padding: 20px;
-            text-align: center;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        h1 {
-            color: #333;
+        /* 각 비디오를 감싸는 상자 */
+        .video-card {
+            background: #333;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 30px; /* 영상 사이 간격 */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
-        
-        /* 반응형 비디오 스타일 */
+        h2 {
+            margin-top: 0;
+            color: #ffcc00; /* 제목 색상 (노란색 포인트) */
+            font-size: 1.2rem;
+        }
         video {
             width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        
-        /* 유튜브 임베드 반응형 처리 */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 비율 */
-            height: 0;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
+            border-radius: 8px;
+            background: black;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>🎬 나의 영상 갤러리</h1>
-        <p>이곳은 제가 만든 영상을 공유하는 공간입니다.</p>
+        <h1>🎬 찬양 영상을 보고 연습합시다</h1>
+        <p>총 2개의 영상을 업로드했습니다.</p>
 
-        <hr>
-
-        <h3>1. 유튜브 영상 예시</h3>
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen></iframe>
+        <div class="video-card">
+            <h2>1. 오리지널 음원</h2>
+            <video controls playsinline>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
         </div>
 
-        <br><hr><br>
+        <div class="video-card">
+            <h2>2. MR </h2>
+            <video controls playsinline>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+        </div>
 
-        <h3>2. 직접 업로드한 영상 예시</h3>
-        <video controls poster="thumbnail.jpg">
-            <source src="my-video.mp4" type="video/mp4">
-            브라우저가 비디오 태그를 지원하지 않습니다.
-        </video>
     </div>
 
 </body>
